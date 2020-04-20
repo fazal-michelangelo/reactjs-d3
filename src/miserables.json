@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "AtkScore",
+      "group": 101,
+      "fontIcon": "\u00A2"
+    },
+    {
+      "id": "385",
+      "group": 101
+    },
+    {
+      "id": "135",
+      "group": 101
+    },
+    {
+      "id": "110",
+      "group": 101
+    },
+    {
+      "id": "ChainPhase",
+      "group": 102
+    },
+    {
+      "id": "Lateral Movement",
+      "group": 102
+    },
+    {
+      "id": "Data Theft",
+      "group": 102
+    },
+    {
+      "id": "Privilege Escalation",
+      "group": 102
+    },
+    {
+      "id": "ThreatIds",
+      "group": 103
+    },
+    {
+      "id": "credtheft_kerberoasting\n",
+      "group": 103
+    },
+    {
+      "id": "filetheft_active_monitoring\n",
+      "group": 103
+    }
+  ],
+  "links": [
+    {
+      "source": "385",
+      "target": "AtkScore",
+      "value": "101"
+    }, 
+    {
+      "source": "135",
+      "target": "AtkScore",
+      "value": "101"
+    }, 
+    {
+      "source": "110",
+      "target": "AtkScore",
+      "value": "101"
+    }, 
+    {
+      "source": "ChainPhase",
+      "target": "AtkScore",
+      "value": "101"
+    }, 
+    {
+      "source": "Lateral Movement",
+      "target": "ChainPhase",
+      "value": "102"
+    }, 
+    {
+      "source": "Data Theft",
+      "target": "ChainPhase",
+      "value": "102"
+    }, 
+    {
+      "source": "Privilege Escalation",
+      "target": "ChainPhase",
+      "value": "102"
+    }, 
+    {
+      "source": "ThreatIds",
+      "target": "AtkScore",
+      "value": "101"
+    }, 
+    {
+      "source": "credtheft_kerberoasting\n",
+      "target": "ThreatIds",
+      "value": "103"
+    }, 
+    {
+      "source": "filetheft_active_monitoring\n",
+      "target": "ThreatIds",
+      "value": "103"
+    }
+  ]
+}
