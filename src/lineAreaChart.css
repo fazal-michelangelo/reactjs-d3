@@ -25,7 +25,7 @@ svg {
   .legend .outer {
     /* fill: rgba(230, 230, 255, 0.8); */
     /* fill: greenyellow; */
-    fill: #c5d5e9;
+    fill: #aecbef;
     stroke: rgba(216, 216, 255, 0.8);
   }
 
@@ -80,4 +80,16 @@ svg {
 
   .marker text {
     text-anchor: middle;
+  }
+
+  .y.axis path {
+    stroke: none;
+  }
+
+  .grid path {
+      stroke: none;
+  }
+
+  .grid .tick {
+      stroke-width: 0.3;
   }
