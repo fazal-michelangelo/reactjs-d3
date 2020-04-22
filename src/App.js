@@ -3,9 +3,13 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './App.css';
 import './timeline.css';
 import MyD3Component from './DDDHooksChart';
-import TimelineBubble from './timelineBubble';
-import LollipopChart from './LollipopChart6';
+// import TimelineBubble from './timelineBubble';
+import TimelineBubble from './LollipopChart3';
+import LollipopChartV1 from './LollipopChart5';
+import LollipopChartV2 from './LollipopChart6';
 import PerfectTimeline from './PerfectTimeline';
+import BollingerBands from './BollingerBands2';
+import LineAreaChart from './LineAreaChart';
   
 function App() {
 
@@ -19,29 +23,53 @@ function App() {
                             <Link to="/">Force-Directed</Link>
                         </li>
                         <li>
-                            <Link to="/about">Timeline-Bubble</Link>
+                            <Link to="/timeline-bubble">Timeline-Bubble</Link>
                         </li>
                         <li>
-                            <Link to="/lollipop-1">Lollipop-Chart-1</Link>
+                            <Link to="/timeline-v1">Timeline-v1</Link>
                         </li>
                         <li>
-                            <Link to="/perfect-timeline">Perfect-Timeline</Link>
+                            <Link to="/timeline-v2">Timeline-v2</Link>
                         </li>
+                        <li>
+                            <Link to="/perfect-timeline">Perfect-timeline</Link>
+                        </li>
+                        <li>
+                            <Link to="/bollinger-bands">bollinger-bands</Link>
+                        </li>
+                        <li>
+                            <Link to="/line-area-chart">Line-Area-Chart</Link>
+                        </li>
+                        {/* <li>
+                            <Link to="/sankey-chart">sankey-chart</Link>
+                        </li> */}
                     </ul>
                     <hr />
                     <Switch>
                         <Route exact path="/">
                             <MyD3Component />
                         </Route>
-                        <Route path="/about">
+                        <Route path="/timeline-bubble">
                             <TimelineBubble />
                         </Route>
-                        <Route path="/lollipop-1">
-                            <LollipopChart />
+                        <Route path="/timeline-v1">
+                            <LollipopChartV1 />
+                        </Route>
+                        <Route path="/timeline-v2">
+                            <LollipopChartV2 />
                         </Route>
                         <Route path="/perfect-timeline">
                             <PerfectTimeline />
                         </Route>
+                        <Route path="/bollinger-bands">
+                            <BollingerBands />
+                        </Route>
+                        <Route path="/line-area-chart">
+                            <LineAreaChart />
+                        </Route>                        
+                        {/* <Route path="/perfect-timeline">
+                            <SankeyChart />
+                        </Route> */}
                     </Switch>
                 </div>
             </Router>

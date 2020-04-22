@@ -92,3 +92,47 @@ h2 {
 .circles {
   z-index: 99999;
 }
+
+div.dnif_timeline-tooltip {	
+  position: absolute;			
+  text-align: center;			
+  width: 60px;					
+  height: 28px;					
+  padding: 2px;				
+  font: 12px sans-serif;		
+  background: lightsteelblue;	
+  border: 0px;		
+  border-radius: 8px;			
+  pointer-events: none;			
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #999;
+  /* shape-rendering: crispEdges; */
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 1.5px;
+}
+
+.line.bands {
+  stroke: #6c949f;
+  stroke-opacity: 0.6;
+}
+
+.area.bands {
+  fill: #6c949f;
+  fill-opacity: 0.3;
+  stroke: none;
+}
+
+
+path {
+  stroke-linejoin: round;
+  stroke-miterlimit: 2;
+  stroke-linecap: round;
+}
