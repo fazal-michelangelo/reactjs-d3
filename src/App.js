@@ -8,7 +8,6 @@ import TimelineBubble from './LollipopChart3';
 import LollipopChartV1 from './LollipopChart5';
 import LollipopChartV2 from './LollipopChart6';
 import PerfectTimeline from './PerfectTimeline';
-import BollingerBands from './BollingerBands2';
 import LineAreaChart from './LineAreaChart';
   
 function App() {
@@ -35,9 +34,6 @@ function App() {
                             <Link to="/perfect-timeline">Perfect-timeline</Link>
                         </li>
                         <li>
-                            <Link to="/bollinger-bands">bollinger-bands</Link>
-                        </li>
-                        <li>
                             <Link to="/line-area-chart">Line-Area-Chart</Link>
                         </li>
                         {/* <li>
@@ -60,9 +56,6 @@ function App() {
                         </Route>
                         <Route path="/perfect-timeline">
                             <PerfectTimeline />
-                        </Route>
-                        <Route path="/bollinger-bands">
-                            <BollingerBands />
                         </Route>
                         <Route path="/line-area-chart">
                             <LineAreaChart />
