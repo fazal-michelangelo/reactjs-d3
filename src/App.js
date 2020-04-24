@@ -8,7 +8,7 @@ import TimelineBubble from './LollipopChart3';
 import LollipopChartV1 from './LollipopChart5';
 import LollipopChartV2 from './LollipopChart6';
 import PerfectTimeline from './PerfectTimeline';
-import LineAreaChart from './LineAreaChart2';
+import LineAreaChart from './LineAreaChart3';
   
 function App() {
 
@@ -77,19 +77,19 @@ function App() {
                         <Route exact path="/">
                             <MyD3Component />
                         </Route>
-                        <Route path="/timeline-bubble">
+                        <Route exact path="/timeline-bubble">
                             <TimelineBubble />
                         </Route>
-                        <Route path="/timeline-v1">
+                        <Route exact path="/timeline-v1">
                             <LollipopChartV1 />
                         </Route>
-                        <Route path="/timeline-v2">
+                        <Route exact path="/timeline-v2">
                             <LollipopChartV2 />
                         </Route>
-                        <Route path="/perfect-timeline">
+                        <Route exact path="/perfect-timeline">
                             <PerfectTimeline />
                         </Route>
-                        <Route path="/line-area-chart">
+                        <Route exact path="/line-area-chart">
                             <LineAreaChart getData={anyDataVal} />
                         </Route>                        
                         {/* <Route path="/perfect-timeline">
