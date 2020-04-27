@@ -8,7 +8,11 @@ import TimelineBubble from './LollipopChart3';
 import LollipopChartV1 from './LollipopChart5';
 import LollipopChartV2 from './LollipopChart6';
 import PerfectTimeline from './PerfectTimeline';
-import LineAreaChart from './LineAreaChart3';
+import LineAreaChart from './LineAreaChart4';
+
+// import lineAreaData from './ip17.json';
+// import lineAreaData from './ip19.json';
+import lineAreaData from './ip20.json';
   
 function App() {
 
@@ -90,7 +94,7 @@ function App() {
                             <PerfectTimeline />
                         </Route>
                         <Route exact path="/line-area-chart">
-                            <LineAreaChart getData={anyDataVal} />
+                            <LineAreaChart getData={lineAreaData} />
                         </Route>                        
                         {/* <Route path="/perfect-timeline">
                             <SankeyChart />

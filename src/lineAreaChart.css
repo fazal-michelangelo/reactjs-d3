@@ -30,7 +30,7 @@ svg {
   }
 
   /*added legend and marker display none by: fazal-khan(software-engineer)*/
-  .legend, .marker {
+  .marker {
     display: none;
   }
 
@@ -49,9 +49,14 @@ svg {
     stroke-width: 1;
   }
 
+  .legend {
+      /* display: none; */
+  }
+
   .legend .legend-bg {
-    fill: rgba(0, 0, 0, 0.5);
-    stroke: rgba(0, 0, 0, 0.5);
+      fill: #ffffff;
+    /* fill: rgba(0, 0, 0, 0.3); */
+    /* stroke: rgba(0, 0, 0, 0.5); */
   }
 
   .marker.client .marker-bg,
@@ -71,13 +76,16 @@ svg {
   .marker path {
     fill: none;
   }
-
-  .legend text,
+,
   .marker text {
     fill: #fff;
     font-weight: bold;
   }
 
+  .legend text {
+      fill: #000000;
+      font-size: 12px;
+  }
   .marker text {
     text-anchor: middle;
   }
@@ -92,4 +100,10 @@ svg {
 
   .grid .tick {
       stroke-width: 0.3;
+  }
+
+  .chart-baseline {
+    fill: none;
+    stroke: blue;]
+    stroke-width: 1;
   }
