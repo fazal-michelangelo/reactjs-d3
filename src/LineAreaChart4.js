@@ -12,9 +12,6 @@ const BollingerBands = (props) => {
     });
 
     function drawChart() {
-
-
-
     var div = d3.select("body").append("div")
     .attr("class", "dnif_timeline-tooltip")				
     .style("opacity", 0);
@@ -69,28 +66,28 @@ const BollingerBands = (props) => {
 
 
 
-            // var y = d3.scaleLinear()
-            // .range([chartHeight, 0])
-            // .domain([0, d3.max(data, function (d) { return d.upper; })]);
+            var y = d3.scaleLinear()
+            .range([chartHeight, 0])
+            .domain([0, d3.max(data, function (d) { return d.upper; })]);
             
     
 
 
                 
 
-            // // gridlines in y axis function
-            // function make_y_gridlines() {		
-            //     return d3.axisLeft(y)
-            //         // .ticks(5)
-            // }
+            // gridlines in y axis function
+            function make_y_gridlines() {		
+                return d3.axisLeft(y)
+                    // .ticks(5)
+            }
 
 
-            // svg.append("g")			
-            // .attr("class", "grid")
-            // .call(make_y_gridlines()
-            //     .tickSize(-chartWidth)
-            //     .tickFormat("")
-            // )
+            svg.append("g")			
+            .attr("class", "grid")
+            .call(make_y_gridlines()
+                .tickSize(-chartWidth)
+                .tickFormat("")
+            )
 
 
 
@@ -200,7 +197,7 @@ const BollingerBands = (props) => {
               .y1(function (d) { return y(d.current); });
       
             var medianLine = d3.line()
-              .curve(d3.curveLinear)
+              .curve(d3.curveMonotoneX)
               // .interpolate('basis')
               .x(function (d) { return x(d.date); })
               .y(function (d) { return y(d.current); });
@@ -251,13 +248,13 @@ const BollingerBands = (props) => {
               .data(data)
               .enter().append("circle")
               .attr("class", "dot")
-              .attr("r",3.5)
+              .attr("r", 4)
               .attr("cx", function(d) { return x(d.date); })
               .attr("cy", function(d) { return y(d.current); })
   
-              .style('fill', function(d) {
-                  if(d.current > d.upper) { return "red"}
-                  else {return "none"}
+              .attr('class', function(d) {
+                  if(d.current > d.upper) { return "colored-circle"}
+                  else {return "mute-circle"}
               })
             
               .on("mouseover", function(d) {		
@@ -341,24 +338,6 @@ const BollingerBands = (props) => {
 
             var parseDate = d3.timeParse("%Y-%m-%d");
             
-    
-
-
-                
-
-            // // gridlines in y axis function
-            // function make_y_gridlines() {		
-            //     return d3.axisLeft(y)
-            //         // .ticks(5)
-            // }
-
-
-            // svg.append("g")			
-            // .attr("class", "grid")
-            // .call(make_y_gridlines()
-            //     .tickSize(-chartWidth)
-            //     .tickFormat("")
-            // )
 
 
           }
@@ -393,7 +372,7 @@ const BollingerBands = (props) => {
       
               var yAxis = d3.axisLeft(y)
                 .ticks(20)
-                .tickFormat(d3.format(".1s"))
+                .tickFormat(d3.format(".2s"))
                 // .tickFormat(d3.formatPrefix(".1", 2e5));
               
                 // .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10);

@@ -445,34 +445,34 @@ const BollingerBands = (props) => {
       
           function drawPaths(svg, data, x, y) {
             var upperOuterArea = d3.area()
-              .curve(d3.curveBasis)
+              .curve(d3.curveMonotoneX)
               // .interpolate('basis')
               .x(function (d) { return x(d.date) || 1; })
               .y0(function (d) { return y(d.pct95); })
               .y1(function (d) { return y(d.pct75); });
       
             var upperInnerArea = d3.area()
-              .curve(d3.curveBasis)
+              .curve(d3.curveMonotoneX)
               // .interpolate('basis')
               .x(function (d) { return x(d.date) || 1; })
               .y0(function (d) { return y(d.pct75); })
               .y1(function (d) { return y(d.pct50); });
       
             var medianLine = d3.line()
-              .curve(d3.curveLinear)
+              .curve(d3.curveMonotoneX)
               // .interpolate('basis')
               .x(function (d) { return x(d.date); })
               .y(function (d) { return y(d.pct50); });
       
             var lowerInnerArea = d3.area()
-              .curve(d3.curveBasis)
+              .curve(d3.curveMonotoneX)
               // .interpolate('basis')
               .x(function (d) { return x(d.date) || 1; })
               .y0(function (d) { return y(d.pct50); })
               .y1(function (d) { return y(d.pct25); });
       
             var lowerOuterArea = d3.area()
-              .curve(d3.curveLinear)
+              .curve(d3.curveMonotoneX)
               // .interpolate('basis')
               .x(function (d) { return x(d.date) || 1; })
               .y0(function (d) { return y(d.pct95); })
@@ -518,14 +518,14 @@ const BollingerBands = (props) => {
               .attr('opacity', 0);
       
             markerG.transition()
-              .duration(1000)
+            //   .duration(1000)
               .attr('transform', 'translate(' + xPos + ', ' + yPosEnd + ')')
               .attr('opacity', 1);
       
             markerG.append('path')
               .attr('d', 'M' + radius + ',' + (chartHeight - yPosStart) + 'L' + radius + ',' + (chartHeight - yPosStart))
-              .transition()
-              .duration(1000)
+            //   .transition()
+            //   .duration(1000)
               .attr('d', 'M' + radius + ',' + (chartHeight - yPosEnd) + 'L' + radius + ',' + (radius * 2));
       
             markerG.append('circle')
@@ -547,7 +547,7 @@ const BollingerBands = (props) => {
       
           function startTransitions(svg, chartWidth, chartHeight, rectClip, markers, x) {
             rectClip.transition()
-              .duration(1000 * markers.length)
+            //   .duration(1000 * markers.length)
               .attr('width', chartWidth);
       
             markers.forEach(function (marker, i) {

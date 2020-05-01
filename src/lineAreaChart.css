@@ -23,15 +23,17 @@ svg {
 
   .area.outer,
   .legend .outer {
-    /* fill: rgba(230, 230, 255, 0.8); */
-    /* fill: greenyellow; */
-    fill: #aecbef;
-    stroke: rgba(216, 216, 255, 0.8);
+    fill: #dfeaf9
+    /* fill: #aecbef; */
+    /* stroke: rgba(216, 216, 255, 0.8); */
   }
 
   /*added legend and marker display none by: fazal-khan(software-engineer)*/
   .marker {
     display: none;
+  }
+  .legend {
+      /* display: none; */
   }
 
   .area.inner,
@@ -44,7 +46,7 @@ svg {
   .median-line,
   .legend .median-line {
     fill: none;
-    stroke: #000;
+    stroke: #8b289e;
     /* stroke: #4792ab; */
     stroke-width: 1;
   }
@@ -98,12 +100,26 @@ svg {
       stroke: none;
   }
 
-  .grid .tick {
+  .grid line {
+      stroke: rgb(74, 73, 73);
       stroke-width: 0.3;
   }
 
+  /* .grid .tick {
+      stroke-width: 3;
+      stroke: blue;
+  } */
+
   .chart-baseline {
     fill: none;
-    stroke: blue;]
+    stroke: blue;
     stroke-width: 1;
+  }
+
+  .colored-circle {
+      fill: #ffa305;
+  }
+
+  .mute-circle {
+      display: none;
   }
