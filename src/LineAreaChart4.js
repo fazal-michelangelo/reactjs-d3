@@ -431,7 +431,7 @@ const BollingerBands = (props) => {
 
     return (
         <div
-            className="dnif_line_area-chart"
+            id="line_area_chart"
             width={996}
             height={444}
             ref={d3Container}

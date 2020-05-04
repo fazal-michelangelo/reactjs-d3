@@ -2,8 +2,8 @@ svg {
     font: 14px 'Open Sans';
   }
 
-  .axis path,
-  .axis line {
+  #line_area_chart .axis path,
+  #line_area_chart .axis line {
     fill: none;
     stroke: #000;
     shape-rendering: crispEdges;

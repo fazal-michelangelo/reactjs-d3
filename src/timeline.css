@@ -131,7 +131,7 @@ div.dnif_timeline-tooltip {
 }
 
 
-path {
+.d3-lollipop-chart path {
   stroke-linejoin: round;
   stroke-miterlimit: 2;
   stroke-linecap: round;

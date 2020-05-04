@@ -13,6 +13,7 @@ import LineAreaChart from './LineAreaChart4';
 // import lineAreaData from './ip17.json';
 // import lineAreaData from './ip19.json';
 import lineAreaData from './ip20.json';
+import SankeyChart from './SankeyChart';
   
 function App() {
 
@@ -72,9 +73,9 @@ function App() {
                         <li>
                             <Link to="/line-area-chart">Line-Area-Chart</Link>
                         </li>
-                        {/* <li>
+                        <li>
                             <Link to="/sankey-chart">sankey-chart</Link>
-                        </li> */}
+                        </li>
                     </ul>
                     <hr />
                     <Switch>
@@ -96,9 +97,9 @@ function App() {
                         <Route exact path="/line-area-chart">
                             <LineAreaChart getData={lineAreaData} />
                         </Route>                        
-                        {/* <Route path="/perfect-timeline">
+                        <Route path="/sankey-chart">
                             <SankeyChart />
-                        </Route> */}
+                        </Route>
                     </Switch>
                 </div>
             </Router>
